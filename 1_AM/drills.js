@@ -61,7 +61,8 @@ const uniqueOnes = arr => {
 
 };
 
-console.log("Unique Ones: \"" + test + "\"")
+console.log("Unique Ones:")
+console.log(test)
 console.log("Result:")
 console.log(uniqueOnes(test))
 console.log()
@@ -146,8 +147,7 @@ const shiftRight = (str, num) => {
 
 console.log("Shift Right: \"Hello\", 3")
 console.log("Result:")
-console.log(shiftRight("Hello", 3))
-console.log()
+console.log(shiftRight("Hello", 3) + "\n")
 
 /*********the following code for printing a number as a word was found online****************/
 
