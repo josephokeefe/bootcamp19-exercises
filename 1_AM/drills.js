@@ -149,7 +149,7 @@ console.log("Result:")
 console.log(shiftRight("Hello", 3))
 console.log()
 
-
+/*********the following code for printing a number as a word was found online****************/
 
 var th = ['','thousand','million', 'billion','trillion'];
 var dg = ['zero','one','two','three','four', 'five','six','seven','eight','nine'];
@@ -201,6 +201,8 @@ function toWords(s) {
 
     return arr.slice(0, arr.length - 1);
 }
+
+/**************************End of Coppied Code****************************/
 
 const announceDate = () => {
   // TODO - write a function which returns the current date in the following format:
