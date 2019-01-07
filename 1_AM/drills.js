@@ -2,6 +2,10 @@ const assert = require("assert");
 
 // Feel free to look things up online!
 
+console.log()
+
+let test = "joe is my name"
+
 const tokenize = str => {
   // TODO - write a function which converts a multi-word string into an array of words
 
@@ -9,7 +13,12 @@ const tokenize = str => {
 
 };
 
-console.log(tokenize("joe is my name"))
+console.log("Tokenize: \"" + test + "\"")
+console.log("Result:")
+console.log(tokenize(test))
+console.log()
+
+test = "joe"
 
 const reverse = str => {
   // TODO - write a function which reverses the string
@@ -24,7 +33,13 @@ const reverse = str => {
 
 };
 
-console.log(reverse("joe"))
+console.log("Reverse: \"" + test + "\"")
+console.log("Result:")
+console.log(reverse(test))
+console.log()
+
+
+test = tokenize("joe bill joe tom tom tom percy")
 
 const uniqueOnes = arr => {
   // TODO - write a function which returns the inputted array without duplicate elements
@@ -36,7 +51,6 @@ const uniqueOnes = arr => {
     const index = arr.indexOf(arr[i])
 
     if (i !== index) {
-      console.log(i)
       arr.splice(i, 1)
       i -= 1
     }
@@ -47,7 +61,12 @@ const uniqueOnes = arr => {
 
 };
 
-console.log(uniqueOnes(tokenize("joe bill joe tom tom tom percy")))
+console.log("Unique Ones: \"" + test + "\"")
+console.log("Result:")
+console.log(uniqueOnes(test))
+console.log()
+
+test = 4
 
 const factorial = num => {
   // TODO - write a function which returns the factorial of a positive integer
@@ -61,7 +80,10 @@ const factorial = num => {
 
 };
 
-console.log(factorial(4))
+console.log("Factorial: \"" + test + "\"")
+console.log("Result:")
+console.log(factorial(test))
+console.log()
 
 const zip = (arr1, arr2) => {
   // TODO - write a function which combines two arrays into an array of 2-element arrays and returns -1
@@ -83,7 +105,10 @@ const zip = (arr1, arr2) => {
 
 };
 
+console.log("Zip: [1, 2, 3], [5, 3, 1]")
+console.log("Result:")
 console.log(zip([1, 2, 3], [5, 3, 1]))
+console.log()
 
 const unzip = arr => {
   // TODO - Write a function which does the opposite of `zip()`
@@ -100,7 +125,10 @@ const unzip = arr => {
 
 };
 
+console.log("Unzip: [[1, 5], [2, 3], [3, 1]]")
+console.log("Result:")
 console.log(unzip(zip([1, 2, 3], [5, 3, 1])))
+console.log()
 
 const shiftRight = (str, num) => {
   // TODO - write a function which shifts a string `num` characters to the right
@@ -116,7 +144,10 @@ const shiftRight = (str, num) => {
 
 };
 
+console.log("Shift Right: \"Hello\", 3")
+console.log("Result:")
 console.log(shiftRight("Hello", 3))
+console.log()
 
 
 
@@ -171,14 +202,31 @@ function toWords(s) {
     return arr.slice(0, arr.length - 1);
 }
 
-console.log(toWords(43))
-
 const announceDate = () => {
   // TODO - write a function which returns the current date in the following format:
   // "Today's date is January 7th, 2016. It is eleven thirty-seven in the morning."
 
   const today = new Date();
   const dd = today.getDate();
+
+  let ddEnding = ""
+
+  if (dd%10 === 1)
+  {
+    ddEnding = "st"
+  }
+  else if (dd%10 == 2)
+  {
+    ddEnding = "nd"
+  }
+  else if (dd%10 == 3)
+  {
+    ddEnding = "rd"
+  }
+  else
+  {
+    ddEnding = "th"
+  }
 
   const mm = today.getMonth()+1; 
   const yyyy = today.getFullYear();
@@ -200,11 +248,14 @@ const announceDate = () => {
     time = time + "morning."
   }
 
-  return "Today\'s date is " + months[mm - 1] + " " + dd + ", " + yyyy + ". It is " + toWords(hr) + " " + toWords(min) + time
+  return "Today\'s date is " + months[mm - 1] + " " + dd + ddEnding + ", " + yyyy + ". It is " + toWords(hr) + " " + toWords(min) + time
 
 };
 
+console.log("Announce Date")
+console.log("Result:")
 console.log(announceDate())
+console.log()
 
 // Write tests here:
 
