@@ -209,19 +209,11 @@ const announceDate = () => {
   const today = new Date();
   const dd = today.getDate();
 
-  let ddEnding = ""
+  let ddEndings = ["st", "nd", "rd"]
 
-  if (dd%10 === 1)
+  if (dd%10 <= 3)
   {
-    ddEnding = "st"
-  }
-  else if (dd%10 == 2)
-  {
-    ddEnding = "nd"
-  }
-  else if (dd%10 == 3)
-  {
-    ddEnding = "rd"
+    const ddEnding = ddEndings[dd%10 - 1]
   }
   else
   {
