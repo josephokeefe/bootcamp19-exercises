@@ -1,0 +1,30 @@
+#homeImage {
+    padding: 0;
+    height: 90%;
+    width: 100%;
+}
+
+.navbar-default {
+    background-color:#005288;
+    background-image: none;
+    background-repeat: no-repeat;
+    font-family: 'Nunito', sans-serif;
+    height: 10%;
+}
+
+#homeLink {
+    padding-top: 10%;
+    padding-right: 30%;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.card {
+    margin: 5%;
+    margin-right: 0;
+    float: left;
+}
+
+.list-group {
+    margin-bottom: 10px;
+}

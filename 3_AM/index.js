@@ -5,7 +5,7 @@ app.use(express.static(__dirname + "/View"));
 app.use(express.static(__dirname + "/Script"));
 
 app.get("/", (req, res) => {
-  res.sendFile("index.html");
+  res.sendFile(path.join(__dirname + 'index.html'));
 });
 
 app.listen(3000);
