@@ -210,12 +210,13 @@ const announceDate = () => {
 
   const today = new Date();
   const dd = today.getDate();
+  let ddEnding = ""
 
   let ddEndings = ["st", "nd", "rd"]
 
   if (dd%10 <= 3)
   {
-    const ddEnding = ddEndings[dd%10 - 1]
+    ddEnding = ddEndings[dd%10 - 1]
   }
   else
   {
