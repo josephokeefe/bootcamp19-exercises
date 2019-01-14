@@ -3,10 +3,23 @@
 // HINT: recursion may help here
 
 
-const test1 = {
+const truthy = {
+  field: true
+}
+
+const falsey = {
   field: false
 }
 
+const falseyTest = {
+  field: true,
+  fieldObject: falsey
+}
+
+const truthyTest = {
+  field: true,
+  fieldObject: truthy
+}
 
 const hasFalsyValue = obj => {
   for (var property in obj) {
@@ -23,5 +36,9 @@ const hasFalsyValue = obj => {
   return false;
 };
 
+console.log("Object with falsey child:")
+console.log(hasFalsyValue(falseyTest))
+console.log()
 
-console.log(hasFalsyValue(test))
+console.log("Object with truthy child:")
+console.log(hasFalsyValue(truthyTest))

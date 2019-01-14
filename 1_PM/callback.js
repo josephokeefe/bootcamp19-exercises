@@ -27,7 +27,3 @@ const getUser = callback => {
 };
 
 getUser(coinToss);
-
-
-
-
